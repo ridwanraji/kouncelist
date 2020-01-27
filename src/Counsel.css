@@ -1,0 +1,11 @@
+.counsel-item {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 20px;
+	padding: 30px 20px;
+	font-weight: bold;
+	color: #a1a1a3;
+	background-color: #fff;
+	border-radius: 10px;
+	box-shadow: 5px 5px 13px 0px rgba(166, 170, 169, 0.18);
+  }
