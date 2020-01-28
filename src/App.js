@@ -1,6 +1,7 @@
 import React from "react";
 import Counsel from "./components/Counsel";
 import "./App.css";
+import RandomCounsel from "./components/RandomCounsel";
 import "./Counsel.css";
 
 class App extends React.Component {
@@ -52,11 +53,11 @@ class App extends React.Component {
       console.log(error);
     }
   }
-  
+
   /**
    * A function that search keyword from the API.
-   * If keyword is found, return an array object conataining 
-   * the corresponding keywords 
+   * If keyword is found, return an array object conataining
+   * the corresponding keywords
    * @param {*} x Keyword to search from the API
    */
   searchCounsel(x) {
@@ -89,20 +90,16 @@ class App extends React.Component {
   render() {
     // console.log(this.state.counsels);
     // console.log(this.state.oneCounsel)
-
     if (this.state.error) {
       return <div className="App">Error: {this.state.error.message}</div>;
     } else if (!this.state.isLoaded) {
       return <div className="App">Loading...</div>;
     } else {
-      const singleCounsel = (
-        <div>
-          {this.state.oneCounsel.advice}
-        </div>
-      );
       return (
-        <div className="App">
-          <h3 className="App-header">{singleCounsel}</h3>
+        <div>
+          <div className="App-header">
+            <RandomCounsel counsel={this.state.oneCounsel.advice} />
+          </div>
         </div>
       );
     }
