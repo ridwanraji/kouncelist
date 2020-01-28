@@ -1,8 +1,9 @@
 import React from "react";
 import Counsel from "./components/Counsel";
-import "./App.css";
+// import Emoji from "./components/Emoji";
+import "./Styles/App.css";
 import RandomCounsel from "./components/RandomCounsel";
-import "./Counsel.css";
+import "./Styles/Counsel.css";
 
 class App extends React.Component {
   constructor(props) {
@@ -100,6 +101,13 @@ class App extends React.Component {
           <div className="App-header">
             <RandomCounsel counsel={this.state.oneCounsel.advice} />
           </div>
+          {/* <div className="Footer">
+            <h6>
+              <Emoji symbol="🐐" />
+              FOR KOBE 
+              <Emoji symbol="  🙏🏾" />
+            </h6>
+          </div> */}
         </div>
       );
     }
