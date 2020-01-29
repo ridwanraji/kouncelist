@@ -1,3 +1,9 @@
+/* .App {
+  align-content: center;
+  text-align: center;
+  justify-content: center;
+  position: relative;
+} */
 .App-header {
   font-weight: bold;
   font-size: 30px;
@@ -7,6 +13,38 @@
   top: 50%;
   transform: translate(-50%, -50%);
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.18);
+}
+
+.header {
+  color: wheat;
+  text-align: center;
+  padding-top: 17px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.emoji {
+  font-size: 20px;
+}
+
+.footer {
+  color: wheat;
+  padding-top: 45px;
+  text-align: center;
+
+}
+
+.sub-header {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.description {
+  font-size: 10px;
+}
+
+a {
+  color: orangered;
 }
 
 @media (min-width: 700px) {
@@ -43,9 +81,4 @@
     top: 50%;
     transform: translate(-50%, -50%);
   }
-}
-
-.Footer {
-  color: aliceblue;
-  text-align: center;
 }
