@@ -1,9 +1,9 @@
 import React from "react";
 import Counsel from "./components/Counsel";
-// import Emoji from "./components/Emoji";
 import "./Styles/App.css";
 import RandomCounsel from "./components/RandomCounsel";
 import "./Styles/Counsel.css";
+import Footer from "./components/Footer";
 
 class App extends React.Component {
   constructor(props) {
@@ -92,7 +92,9 @@ class App extends React.Component {
     // console.log(this.state.counsels);
     // console.log(this.state.oneCounsel)
     if (this.state.error) {
-      return <div className="App-header">Error: {this.state.error.message}</div>;
+      return (
+        <div className="App-header">Error: {this.state.error.message}</div>
+      );
     } else if (!this.state.isLoaded) {
       return <div className="App-header">Loading...</div>;
     } else {
@@ -101,13 +103,7 @@ class App extends React.Component {
           <div className="App-header">
             <RandomCounsel counsel={this.state.oneCounsel.advice} />
           </div>
-          {/* <div className="Footer">
-            <h6>
-              <Emoji symbol="🐐" />
-              FOR KOBE 
-              <Emoji symbol="  🙏🏾" />
-            </h6>
-          </div> */}
+          <Footer />
         </div>
       );
     }
