@@ -4,6 +4,7 @@ import "./Styles/App.css";
 import RandomCounsel from "./components/RandomCounsel";
 import "./Styles/Counsel.css";
 import Footer from "./components/Footer";
+import SearchBar from "./components/SearchBar"
 
 class App extends React.Component {
   constructor(props) {
@@ -104,6 +105,7 @@ class App extends React.Component {
             <RandomCounsel counsel={this.state.oneCounsel.advice} />
           </div>
           <Footer />
+          <SearchBar />
         </div>
       );
     }
