@@ -14,11 +14,11 @@ class App extends React.Component {
       error: null,
       isLoaded: false,
       counsels: [],
-      oneCounsel: {}
+      oneCounsel: {},
+      word: "love"
     };
   }
   componentDidMount() {
-    let word = "me";
 
     // Load initial counsel from the API
     this.loadRandomCounsel();
@@ -27,7 +27,7 @@ class App extends React.Component {
     setInterval(async () => {
       this.loadRandomCounsel();
     }, 60000);
-    this.searchCounsel(word);
+    this.searchCounsel(this.state.word);
   }
 
   /**
@@ -97,18 +97,24 @@ class App extends React.Component {
         <div className="App-header">Error: {this.state.error.message}</div>
       );
     } else if (!this.state.isLoaded) {
-      return <div className="App-header">Loading...</div>;
-    } else {
-      return (
-        <div>
-          <div className="App-header">
-            <RandomCounsel counsel={this.state.oneCounsel.advice} />
-          </div>
-          <Footer />
-          <SearchBar />
-        </div>
-      );
+      return (<div className="App-header">Loading...</div>);
     }
+
+    else if (this.state.counsels === undefined) {
+      return (
+        <div className="App-header"> Sorry, I can't counsel you about "{this.state.word}" right now </div>
+        );
+  } else {
+  return (
+    <div>
+      <div className="App-header">
+        <RandomCounsel counsel={this.state.counsels[2].advice} />
+      </div>
+      <Footer />
+      <SearchBar />
+    </div>
+  );
+}
   }
 }
 
