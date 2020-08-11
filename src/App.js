@@ -90,8 +90,8 @@ class App extends React.Component {
   }
 
   render() {
-    // console.log(this.state.counsels);
-    // console.log(this.state.oneCounsel)
+    console.log(this.state.counsels);
+    console.log(this.state.oneCounsel)
     if (this.state.error) {
       return (
         <div className="App-header">Error: {this.state.error.message}</div>
