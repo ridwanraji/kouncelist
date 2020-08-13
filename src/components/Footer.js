@@ -7,11 +7,6 @@ class Footer extends React.Component {
             <footer className="footer">
                 <span className="header">ONE-MINUTE RANDOM COUNSEL</span>
                 <br></br>
-                <span className="description">
-                    JSYK, Each counsel only last for a minute before another is given{" "}
-                    <Emoji symbol=" 😎" />
-                </span>
-                <br></br>
                 <span className="sub-header">
                     Made for fun and with{" "}
                     <span>
