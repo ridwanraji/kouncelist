@@ -4,7 +4,9 @@
 ## Project Description
 
 ```
-Kouncelist is a react application that gives a random piece of advice. The advice is timed and changes every minute(60 seconds).
+Kouncelist is a react application that gives a random piece of advice.
+
+The advice is timed and changes every minute(60 seconds).
 
 ```
 
