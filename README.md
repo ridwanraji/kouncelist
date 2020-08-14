@@ -8,7 +8,7 @@ Kouncelist is a react application that gives a random piece of advice. The advic
 
 ```
 
-## UI/UX Design
+## Demo
 
 ---
 
